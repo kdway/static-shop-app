@@ -675,7 +675,7 @@
     openCheckoutModal();
   });
     /*******************
-    *
+    * code updated (delivery options js)
       ********************/
     document.getElementById("checkoutForm").addEventListener("submit", () => {
   const cartJSON = JSON.stringify(cartItems, null, 2);
@@ -687,14 +687,6 @@
 });
 
   
-    document.getElementById("checkoutForm").addEventListener("submit", () => {
-  const cartJSON = JSON.stringify(cartItems, null, 2);
-  document.getElementById("cartData").value = cartJSON;
-
-  // also send delivery option
-  const delivery = document.getElementById("deliveryOption").value;
-  document.getElementById("deliveryData").value = delivery;
-});
 
 
   /********************
@@ -827,6 +819,7 @@
   </script>
 </body>
 </html>
+
 
 
 
