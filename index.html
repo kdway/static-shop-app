@@ -154,10 +154,21 @@
           <div class="text-sm text-gray-600">Subtotal</div>
           <div class="text-lg font-semibold" id="cartSubtotal"></div>
         </div>
-        <select id="deliveryOption" name="deliveryOption" class="border p-2 rounded w-full mb-4">
-  <option value="Standard (4 working days max)">Standard – Delivery within 4 working days</option>
-  <option value="Express (2 working days max)">Express – Delivery within 2 working days</option>
-</select>
+<form id="checkoutForm" action="https://formspree.io/f/xovrknkg" method="POST">
+
+  <!-- Your customer fields here -->
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+
+  <!-- Delivery Select -->
+  <select id="deliveryOption" name="deliveryOption">
+    <option value="Standard (4 working days max)">Standard – 4 days</option>
+    <option value="Express (2 working days max)">Express – 2 days</option>
+  </select>
+
+  <!-- ✅ PLACE THE HIDDEN FIELDS HERE -->
+  <input type="hidden" name="cartData" id="cartData">
+  <input type="hidden" name="deliveryData" id="deliveryData">
   <!-- ✅ PLACE THE HIDDEN FIELDS HERE -->
   <input type="hidden" name="cartData" id="cartData">
   <input type="hidden" name="deliveryData" id="deliveryData">
@@ -819,6 +830,7 @@
   </script>
 </body>
 </html>
+
 
 
 
